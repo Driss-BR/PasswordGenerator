@@ -168,3 +168,25 @@ if (window.innerWidth > 1080){
     });
 
 }
+
+
+
+const button = document.querySelector('.btn');
+const copy = document.querySelector('#copy');
+
+button.addEventListener('touchstart', () => {
+  button.classList.add('hover-effect');
+});
+
+button.addEventListener('touchend', () => {
+  button.classList.remove('hover-effect');
+});
+
+copy.addEventListener('touchstart', () => {
+  copy.classList.add('hover-effect');
+});
+
+
+copy.addEventListener('touchend', () => {
+  copy.classList.remove('hover-effect');
+});

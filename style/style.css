@@ -146,12 +146,15 @@ input{
     border-radius: 8px;
 
 }
-
-.container-fluid .generator-box .password #copy:hover > i{
+.container-fluid .generator-box .password #copy.hover-effect{
+    scale: 0.95;
+    transform: translateY(3px);  
+}
+/* .container-fluid .generator-box .password #copy:hover > i{
     color:var(--main-color);
     scale: 1.05;
     transform: translateY(-3px);
-}
+} */
 .container-fluid .generator-box .password .copy-notification{
     position: absolute;
     top:0px;
@@ -241,10 +244,7 @@ input[type=range] {
     left: 10px;
 }
 
-.btn:hover{
-    scale: 1.02;
-    transform: translateY(-3px);
-}
+
 
  /* Start Style Checkbox Button */
  
@@ -322,15 +322,18 @@ input[type=range] {
 
 
 .btn{
+    width: 90%;
     margin: 20px auto 0 auto;
-    background-color: var(--main-color);
+    background-color: transparent;
     border: 2px solid var(--main-color) !important;  
     color: #ffffff;
     font-size: 20px;
-    transition: .5s ease;
+    transition: .2s ease;
 }
-.btn:hover{
-    border: 2px solid var(--main-color) !important;   
+
+.btn.hover-effect{
+    scale: 0.95;
+    transform: translateY(3px);  
 }
 
 /* ------------- Start Media Query ------------------- */
