@@ -149,13 +149,12 @@ input{
 }
 .container-fluid .generator-box .password #copy.hover-effect{
     scale: 0.95;
-    transform: translateY(3px);  
+    transform: translateY(3px);
+    color:#fff;
 }
-/* .container-fluid .generator-box .password #copy:hover > i{
+.container-fluid .generator-box .password #copy:hover > i{
     color:var(--main-color);
-    scale: 1.05;
-    transform: translateY(-3px);
-} */
+}
 .container-fluid .generator-box .password .copy-notification{
     position: absolute;
     top:0px;
@@ -329,10 +328,13 @@ input[type=range] {
     font-size: 20px;
     transition: .2s ease;
 }
-
+.btn:hover{
+    background-color: var(--main-color);
+}
 .btn.hover-effect{
     scale: 0.95;
-    transform: translateY(3px);  
+    transform: translateY(3px); 
+    background-color:orange;
 }
 
 /* ------------- Start Media Query ------------------- */
