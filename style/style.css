@@ -144,6 +144,7 @@ input{
     color: #000000;
     font-size: 20px;
     border-radius: 8px;
+    transition: .2s ease;
 
 }
 .container-fluid .generator-box .password #copy.hover-effect{
@@ -210,14 +211,12 @@ input[type=range] {
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
-    background:#b4b4b4;
+    background:var(--main-color);
     border-radius: 50%;
     cursor: pointer;
     margin-top: -7px;
   }
-  input[type=range]::-webkit-slider-thumb:hover{
-    background: var(--main-color);
-  }
+
   input[type=range]::-moz-range-thumb {
     height: 20px;
     width: 20px;
@@ -409,7 +408,7 @@ input[type=range] {
 @media only screen and (max-width:440px){
     .container-fluid{
         height: 100%;
-        padding: 40px 0;
+        padding: 80px 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -443,17 +442,4 @@ input[type=range] {
 
 
 /* ------------- End Media Query ------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
