@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="card-wrapper">
+            <div class="generator-title card">
+                <h1 class="title"><span>Password</span> Generator</h1>
+                <p>
+                    A leading security tool that helps you
+                    create strong and unique passwords.
+                    Use our site to protect your personal
+                    accounts from hacking and security threats.
+                </p>
+            </div>
+        </div>
+
+        <div class="generate-wrapper">
+            <div class="generator-box generate-card">
+                <div class="password">
+                    <div id="pwd">Start to generete your password</div>
+                    <button id="copy" class="copy-btn"><i class="fa-regular fa-copy"></i></button>
+                    <div class="copy-notification">Copied</div>
+                </div>
+                <div class="length">
+                    <label class="form-label" for="range">LENGTH : <span id="count"></span></label>
+                    <input class="form-range" type="range" min="5" max="25" step="1" value="10" id="range">
+                </div>
+                <div class="variables">
+                    <p class="settings">settings</p>
+                    <label class="container">Include LowerCase
+                        <input id="lowerCase" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Include UpperCase
+                        <input id="upperCase" type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Include Numbers
+                        <input id="Numbers" type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Include Symbols
+                        <input id="Signs" type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <button class="btn col-11" id="generete">Generate Password</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <SCript src="js/jquery-3.7.1.min.js"></SCript>
+    <SCript src="js/main.js"></SCript>
+</body>
+
+</html>

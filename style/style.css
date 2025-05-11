@@ -1,0 +1,456 @@
+/* My Rules */
+*{
+    padding:0 ;
+    margin:0 ;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    transition: .3s ease-in-out;
+    color: var(--text-color);
+}
+:root{
+    --main-color:rgb(255, 119, 0);
+    --text-color:#ffffff;
+}
+input{
+    margin: auto;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 15px !important;
+}
+
+/* Start Bootstrap modify */
+.row>*{
+    padding-left: 0;
+}
+
+/* End Bootstrap modify */
+
+.container-fluid{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 20px;
+    background-image: url(../media/bg00.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+}
+.container-fluid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: none; /* حتى لا تؤثر على التفاعل */
+}
+.container-fluid .card-wrapper {
+    width: 600px;
+    perspective: 1000px; /* مهم جداً لإنشاء التأثير ثلاثي الأبعاد */
+   
+  }
+  
+.container-fluid .card-wrapper .card {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+    transform-style: preserve-3d;
+  }
+  
+.container-fluid .generator-title{
+    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px); /* ✨ الضبابية السحرية */
+    -webkit-backdrop-filter: blur(10px); /* للمتصفحات القديمة */
+    border-radius: 5px;
+    z-index: 999;
+}
+.container-fluid .generator-title .title{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 15px;  
+    color: #ffffff;  
+}
+.container-fluid .generator-title .title span{
+    color: rgb(255, 60, 0);
+    font-weight: 900;
+}
+.container-fluid .generator-title p{
+    font-size: 1.2rem;
+
+}
+
+.container-fluid .generate-wrapper{
+    z-index: 99;
+    width: 500px;
+    perspective: 1000px; /* مهم جداً لإنشاء التأثير ثلاثي الأبعاد */
+}
+.container-fluid .generate-wrapper .generate-card{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    border: 1px solid #ecebeb9c;
+    transition: transform 0.2s ease;
+    transform-style: preserve-3d;
+}
+.container-fluid .generator-box{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* ✨ الضبابية السحرية */
+    -webkit-backdrop-filter: blur(10px); /* للمتصفحات القديمة */
+    padding: 60px 20px;
+    box-shadow:0 0 2px white ;
+    
+}
+.container-fluid .generator-box .password{
+    margin: auto;
+    position: relative;
+}
+.container-fluid .generator-box .password #pwd{
+    margin: auto;
+    height: 50px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);  /*  الضبابية السحرية */
+    -webkit-backdrop-filter: blur(5px);  /* للمتصفحات القديمة */
+    padding: 0px 15px;
+    border: 2px solid var(--main-color) !important;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.container-fluid .generator-box .password #copy{
+    border: none;
+    position: absolute;
+    z-index: 1000;
+    top: 5px;
+    right: 2px;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(27, 27, 27);
+    color: #000000;
+    font-size: 20px;
+    border-radius: 8px;
+
+}
+
+.container-fluid .generator-box .password #copy:hover > i{
+    color:var(--main-color);
+    scale: 1.05;
+    transform: translateY(-3px);
+}
+.container-fluid .generator-box .password .copy-notification{
+    position: absolute;
+    top:0px;
+    right: 0;
+    font-weight: 500;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 248, 0);
+    padding: 8px 15px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: .4s ease;
+}
+.container-fluid .generator-box .password .copy-notification.done{
+    top:-55px;
+    opacity: 1;
+}
+.container-fluid .generator-box .password .copy-notification.finish{
+    top:0;
+    opacity: 0;
+}
+
+ /* Start Style Rnage Input */
+
+.container-fluid .generator-box .length{
+    margin: 25px 0;
+}
+.container-fluid .generator-box .length > label{
+    letter-spacing:1.5px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Track */
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 6px;
+    background:rgb(69, 61, 51);
+    border-radius: 5px;
+  }
+  input[type=range]::-moz-range-track {
+    height: 6px;
+    background: var(--main-color);
+    border-radius: 5px;
+  }
+  
+  /* Thumb */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background:#b4b4b4;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -7px;
+  }
+  input[type=range]::-webkit-slider-thumb:hover{
+    background: var(--main-color);
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+ /* End Style Range Input */
+
+.container-fluid .generator-box .variables{
+    position: relative;
+    margin-bottom: 10px ;
+    padding: 15px 15px;
+    border: 2px solid var(--main-color);
+    border-radius:4px ;
+    color: #ffffff;
+}
+.container-fluid .generator-box .variables .settings{
+    position:absolute;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: rgba(2, 12, 33, 0.8);
+    top: -15px;
+    left: 10px;
+}
+
+.btn:hover{
+    scale: 1.02;
+    transform: translateY(-3px);
+}
+
+ /* Start Style Checkbox Button */
+ 
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    margin: 10px 0 0 15px;
+    padding-left: 45px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eeeeee00;
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ff5100a5;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: var(--main-color);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left:7px;
+    top: 1px;
+    width: 6px;
+    height: 14px;
+    border:2px solid rgb(0, 0, 0);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+   /* End Style Checkbox Button */
+
+
+
+.btn{
+    margin: 20px auto 0 auto;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color) !important;  
+    color: #ffffff;
+    font-size: 20px;
+    transition: .5s ease;
+}
+.btn:hover{
+    border: 2px solid var(--main-color) !important;   
+}
+
+/* ------------- Start Media Query ------------------- */
+
+@media only screen and (max-width:1080px){
+    .container-fluid .card-wrapper{
+        min-width: 300px;
+        width:500px;
+    }
+    .container-fluid .generator-title .title{
+        font-size:60px;
+        line-height: 50px;
+       
+    }
+    .container-fluid .generate-wrapper{
+        min-width: 400px;
+        
+    }
+}
+
+@media only screen and (max-width:800px){
+    .container-fluid{
+        height: 100%;
+        padding: 80px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-position-x: -800px;
+
+    }
+    .container-fluid .card-wrapper{
+        min-width:400px;
+        width:80%;
+
+    }
+    .container-fluid .generator-title .title{
+        font-size:50px;
+        line-height: 70px;
+    }
+    .container-fluid .generate-wrapper{
+        min-width:400px;
+        width: 80%;
+        
+    }
+}
+@media only screen and (max-width:750px){
+    .container-fluid{
+        height: 100%;
+        padding: 50px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-position-x: -800px;
+
+    }
+    .container-fluid .card-wrapper{
+        min-width:400px;
+        width:90%;
+
+    }
+    .container-fluid .generator-title .title{
+        font-size:2.5rem;
+        line-height: 40px;
+    }
+    .container-fluid .generate-wrapper{
+        min-width:400px;
+        width: 90%;  
+    }
+    .container-fluid .generator-box{
+        padding: 20px 20px;
+    }
+}
+@media only screen and (max-width:440px){
+    .container-fluid{
+        height: 100%;
+        padding: 40px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .container-fluid .card-wrapper{
+        min-width:300px;
+        width:90%;
+
+    }
+    .container-fluid .generator-title .title{
+        font-size:1.6rem;
+        line-height: 35px;
+    }
+    .container-fluid .generator-title p{
+        font-size:1rem;
+    }
+    .container-fluid .generate-wrapper{
+        min-width:200px;
+        width: 90%;
+        
+    }
+    .container-fluid .generator-box .variables div:nth-child(5) input{
+        margin:0px;
+    }
+    #pwd{
+        font-size: 12px;
+    }
+}
+
+
+
+/* ------------- End Media Query ------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
